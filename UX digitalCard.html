@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="UI/UXCard.css" rel="stylesheet" type="text/css">
+  <title>Document</title>
+</head>
+<body>
+    <div class="container">
+      <div class="credit-card-container">
+        <div class="card">
+          <div class="debit-card-front">
+            <div class="card-nums-border"></div>
+            <div class="debit-front-text">
+              <p>Visa Gold Debit</p> 
+              <div class="card-chip"></div> 
+              <p class="card-nums"></p>
+              <p class="card-nums-after"></p>
+              <p class="card-dates">00/00</p>
+              <p class="second-card-dates">00/00</p>
+              <div class="cardName-section">
+                <p class="card-holder-name">Card Holder Name</p>
+                <p class="card-holder-name-text"></p>
+                <!-- <p class="card-holder-name-text-second"></p> -->
+              </div>
+            </div>
+          </div>
+          <div class="debit-card-back">
+            <div class="three-num-code">
+              
+            </div>
+          </div>
+        </div> 
+      </div> 
+      <div class="input-card">
+         <div class="main-info">
+            <label>Card Number:
+              <br>
+              <input type="text" class="cardNumber">
+            </label>
+            <label>Card Holder:
+              <br>
+              <input type="text" class="cardHolder">
+            </label>
+         </div>
+         <div class="nums">
+            <input type="month" class="date">
+            <!-- <input type="year" class="year"> -->
+            <input type="text" class="CVV">
+         </div>
+         <button class="submit"></button>
+      </div>
+    </div>
+  <script src="UI/UXCard.js"></script>
+</body>
+</html>

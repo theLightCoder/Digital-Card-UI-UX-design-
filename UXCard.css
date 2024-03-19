@@ -1,0 +1,296 @@
+*{
+    padding: 0;
+    margin: 0;
+  }
+  body{
+    /* background-image: url('https://images.unsplash.com/photo-1446941611757-91d2c3bd3d45?q=80&w=2002&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); */
+    background-position: center;
+    background-size: cover;
+  }
+  .input-card{
+    padding: 15px;
+    transform: translateY(30%);
+    margin: auto;
+    height: 400px;
+    width: 500px;
+    /* border: 1px solid black; */
+    border-radius: 8px;
+    background-color: rgba(130, 0, 195, 0.108);
+    backdrop-filter: blur(6px);
+  }
+  input{
+    background-color: transparent;
+    border-bottom: 2px solid rgb(135, 105, 255);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  .credit-card-container{
+    position: relative;
+    perspective: 700px;
+    /* transform: translateX(30%); */
+    /* box-shadow: 10px 5px 5px gray; */
+    margin-left: 36%;
+    margin-top: 20px;
+    z-index: 2;
+  }
+  /* .credit-card-container::after{
+    content: ' ';
+    background: rgba(0, 255, 255, 0.493);
+    position: absolute;
+    border: 3px solid rgb(0, 255, 255);
+    border-radius: 5px;
+    top:20px;
+    left: 0;
+    height: 20px;
+    width: 200px; 
+  } */
+  
+  .card{
+    /* box-shadow: 10px 10px 5px gray; */
+    position: absolute;
+    /* z-index: 4; */
+    transition: 0.8s;
+    transform-style: preserve-3d;
+    /* background-color: black; */
+    border-radius:  5px ;
+    width: 400px;
+    height: 200px;
+    background-image: url('https://images.unsplash.com/photo-1610296669228-602fa827fc1f?q=80&w=1975&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-position: center;
+    background-size: cover;
+  }
+  .is-fliped{
+    transform: rotateY(180deg); 
+    transition: 0.8s;
+  }
+  .debit-card-front,
+  .debit-card-back{
+    width: 400px;
+    height: 200px;
+    border: 1px solid black;
+    position: absolute;
+    backface-visibility: hidden;
+  }
+  .debit-card-front{
+    
+    /* backface-visibility: hidden; */
+    /* background-color: rgb(25, 36, 255); */
+    border-radius: 10px;
+  }
+  .debit-card-back{
+    background-image: url('https://images.unsplash.com/photo-1608178398319-48f814d0750c?q=80&w=1779&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-position: center;
+    background-size: cover;
+    transform: rotateY(180deg);
+    border-radius: 5px;
+  }
+  
+  .nums{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+    gap: 5px;
+  }
+  .main-info{
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    gap: 30px;
+  }
+  .cardNumber{
+   width: 90%;
+  }
+  .cardHolder{
+    width: 90%;
+  }
+  
+  .date{
+    width: 33%;
+  }
+  .year{
+    width: 33%;
+  }
+  .text{
+    width: 33%;
+  }
+  .debit-front-text{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* border: 1px solid black; */
+    /* margin-left: 10%; */
+    justify-content: center;
+    flex-direction: column;
+  }
+  .card-chip{
+    height: 30px;
+    width: 30px;
+    background-color: gold;
+    margin-left: 8%;
+  }
+  
+  
+  /* .debit-front-text p:nth-child(1),p:nth-child(3),p:nth-child(5){
+    margin-left: 5%;
+    color: silver;
+  } */
+  .debit-front-text p:nth-child(1){
+    margin-right: 8%;
+    align-self: flex-end;
+  }
+  .debit-front-text p:nth-child(2){
+    margin-top: 1rem;
+  }
+  .debit-front-text p:nth-child(3){
+    margin-top: 1rem;
+    margin-left: 5%;
+  }
+  .debit-front-text p:nth-child(5){
+    margin-right: 8%;
+    align-self: flex-end;
+  }
+  .debit-front-text p:nth-child(6){
+    margin-right: 8%;
+    align-self: flex-end;
+  }
+  .debit-front-text p:nth-child(4){
+    margin-bottom: 0.3rem;
+  }
+  .debit-front-text p:nth-child(4){
+    margin-left:5%;
+    align-self: flex-start;
+  }
+  .debit-front-text p:nth-child(6){
+    margin-left:5%
+  }
+  .card-nums-border{
+    position: absolute;
+    height: 1rem;
+    top: 0;
+    width: 50%;
+    border-radius: 5px;
+    transition: 1.2s;
+    transform: translateY(5px);
+    /* border: 3px solid rgba(0, 255, 255, 0.944); */
+  }
+  .card-nums-border-appear{
+    height: 1.5rem;
+    border: 3px solid rgb(0, 255, 255);
+    width: 55%;
+    border-radius: 5px;
+  }
+  .card-nums{
+    display:flex;
+    padding:0;
+    margin-top: 5px;
+  }
+  
+  .zero{
+    margin: 0;
+    transform: translateY(0);
+    transition: 0.5s;
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+  .zero-add{
+    transform:translateY(-20px);
+    color:transparent;
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+  .addedNum{
+    margin: 0;
+    transform: translateY(0);
+    transition: 0.5s;
+    margin-left: 1px;
+    margin-right: 1px;
+    color: transparent;
+  }
+  .addedNum-add{
+    color:white;
+    transform:translateY(-20px);
+    margin-left: 1px;
+    margin-right: 1px;
+  }
+  
+  .card-nums-after{
+    display:flex;
+    padding:0;
+  }
+  .card-holder-name{
+    /* border: 1px solid black; */
+    width: 10rem;
+    height: 0.5rem;
+    margin-bottom: 10px;
+  }
+  .debit-front-text p:nth-child(1), p:nth-child(3){
+    color: rgb(255, 255, 255);
+  }
+  .debit-front-text .cardName-section p:nth-child(1){
+    color: white;
+    /* margin-top: 5px; */
+    margin-left: 0.8rem;
+    transition: 0.6s;
+  }
+  .new-card-holder-class{
+    margin-left: 0.8rem;
+    font-size: 0.6rem;
+    /* margin-bottom: 10px; */
+  }
+  .card-holder-name-text{
+    margin-bottom: 10px;
+    padding: 0;
+    height: 1rem;
+    display: flex;
+    /* align-items: flex-start; */
+    width:40%;
+  }
+  
+  .letter-name{
+   color: transparent;
+   /* color: green; */
+   font-size: 1.3rem;
+   transition: 0.5s;
+   transform: translateY(-20px);
+  }
+  .letter-name-add{
+    color: white;
+    transform: translateY(-7px);
+  }
+  .second-letter{
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: red;
+    transform: translateX(-148px);
+  }
+  .cardName-section{
+    margin-left: 5%;
+    width: 50%;
+    /* border: 1px solid black; */
+    
+  }
+  .card-dates{
+    transform: translateY(0);
+    transition: 0.5s;
+    color: rgba(255, 255, 255, 0);
+  }
+  .card-dates-add{
+    transform: translateY(15px);
+    color: rgba(255, 255, 255, 0.999)
+  }
+  .second-card-dates{
+    /* transform: translateY(0); */
+    transition: 0.8s;
+    color: white;
+  }
+  .second-card-dates-add{
+    transform: translateY(30px);
+    color: rgba(244, 244, 244, 0);
+  }
+  .three-num-code{
+    width: 100%;
+    height: 16%;
+    background-color: white;
+    margin-top:8rem;
+  }
